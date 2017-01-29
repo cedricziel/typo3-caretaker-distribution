@@ -1,6 +1,6 @@
-# TYPO3 CMS Base Distribution
+# TYPO3 CMS Caretaker Distribution
 
-Get going quickly with TYPO3 CMS.
+Get going quickly with TYPO3 CMS and the caretaker project (https://github.com/TYPO3-Caretaker/caretaker).
 
 ## Prerequisites
 
@@ -28,6 +28,8 @@ vendor/bin/typo3cms install:setup \
     --admin-password=password \
     --site-setup-type=site
 ```
+
+* install caretaker extension `vendor/bin/typo3cms extension:activate`
 
 * `TYPO3_CONTEXT=Development php -S localhost:8000 -t web`
 * open your browser at "http://localhost:8000"

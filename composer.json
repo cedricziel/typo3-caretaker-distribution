@@ -2,13 +2,14 @@
 	"repositories": [
 		{ "type": "composer", "url": "https://composer.typo3.org/" }
 	],
-	"name": "cedricziel/typo3-base-distribution",
-	"description" : "TYPO3 CMS Base Distribution",
+	"name": "cedricziel/typo3-caretaker-distribution",
+	"description" : "TYPO3 CMS Caretaker Distribution",
 	"license": "GPL-2.0+",
 	"type": "project",
 	"require": {
 		"typo3/cms": "7.6.*",
-		"helhum/typo3-console": "^4.1"
+		"helhum/typo3-console": "^4.1",
+		"caretaker/caretaker": "dev-master"
 	},
 	"scripts":{
 		"typo3-cms-scripts": [

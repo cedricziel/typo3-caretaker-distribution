@@ -4,8 +4,140 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "a1e75f45d52ac3fd2dbe98df6d09d419",
+    "content-hash": "eae26442a1fa4e7f0e9b808113128994",
     "packages": [
+        {
+            "name": "caretaker/caretaker",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/TYPO3-Caretaker/caretaker.git",
+                "reference": "974741ff485d1623f27b7f324b5a8c0e470671a3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/TYPO3-Caretaker/caretaker/zipball/974741ff485d1623f27b7f324b5a8c0e470671a3",
+                "reference": "974741ff485d1623f27b7f324b5a8c0e470671a3",
+                "shasum": ""
+            },
+            "require": {
+                "caretaker/caretaker_instance": "*",
+                "typo3/cms": "*",
+                "typo3/cms-core": "^6.2.14|^7.6.0"
+            },
+            "replace": {
+                "caretaker": "self.version",
+                "typo3-ter/caretaker": "self.version"
+            },
+            "require-dev": {
+                "mikey179/vfsstream": "1.4.*@dev",
+                "namelesscoder/typo3-repository-client": "1.1.x-dev",
+                "phpunit/phpunit": "~4.7.0"
+            },
+            "type": "typo3-cms-extension",
+            "extra": {
+                "typo3/cms": {
+                    "cms-package-dir": "{$vendor-dir}/typo3/cms",
+                    "web-dir": ".Build/Web"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Caretaker\\Caretaker\\": "Classes/"
+                },
+                "classmap": [
+                    "Classes",
+                    "interfaces",
+                    "scheduler",
+                    "pi_abstract",
+                    "pi_base",
+                    "pi_graphreport",
+                    "pi_overview",
+                    "pi_singleview"
+                ]
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Caretaker\\Caretaker\\Tests\\": "Tests",
+                    "TYPO3\\CMS\\Core\\Tests\\": ".Build/vendor/typo3/cms/typo3/sysext/core/Tests/",
+                    "TYPO3\\CMS\\Fluid\\Tests\\": ".Build/vendor/typo3/cms/typo3/sysext/fluid/Tests/"
+                }
+            },
+            "scripts": {
+                "post-autoload-dump": [
+                    "mkdir -p .Build/Web/typo3conf/ext/",
+                    "[ -L .Build/Web/typo3conf/ext/caretaker ] || ln -snvf ../../../../. .Build/Web/typo3conf/ext/caretaker"
+                ]
+            },
+            "description": "TYPO3 caretaker server",
+            "homepage": "https://github.com/TYPO3-Caretaker/",
+            "support": {
+                "source": "https://github.com/TYPO3-Caretaker/caretaker/tree/master",
+                "issues": "https://github.com/TYPO3-Caretaker/caretaker/issues"
+            },
+            "time": "2016-06-23 12:37:56"
+        },
+        {
+            "name": "caretaker/caretaker_instance",
+            "version": "0.7.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/TYPO3-Caretaker/caretaker_instance.git",
+                "reference": "450fdb460ff99b3b91f628e103841b0d909f3894"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/TYPO3-Caretaker/caretaker_instance/zipball/450fdb460ff99b3b91f628e103841b0d909f3894",
+                "reference": "450fdb460ff99b3b91f628e103841b0d909f3894",
+                "shasum": ""
+            },
+            "require": {
+                "typo3/cms": "*",
+                "typo3/cms-core": "^6.2.14|^7.6.0"
+            },
+            "replace": {
+                "caretaker_instance": "self.version",
+                "typo3-ter/caretaker_instance": "self.version"
+            },
+            "require-dev": {
+                "mikey179/vfsstream": "1.4.*@dev",
+                "namelesscoder/typo3-repository-client": "1.1.x-dev",
+                "phpunit/phpunit": "~4.7.0"
+            },
+            "type": "typo3-cms-extension",
+            "extra": {
+                "typo3/cms": {
+                    "cms-package-dir": "{$vendor-dir}/typo3/cms",
+                    "web-dir": ".Build/Web"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "classes",
+                    "services"
+                ]
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Caretaker\\CaretakerInstance\\Tests\\": "Tests",
+                    "TYPO3\\CMS\\Core\\Tests\\": ".Build/vendor/typo3/cms/typo3/sysext/core/Tests/",
+                    "TYPO3\\CMS\\Fluid\\Tests\\": ".Build/vendor/typo3/cms/typo3/sysext/fluid/Tests/"
+                }
+            },
+            "scripts": {
+                "post-autoload-dump": [
+                    "mkdir -p .Build/Web/typo3conf/ext/",
+                    "[ -L .Build/Web/typo3conf/ext/caretaker_instance ] || ln -snvf ../../../../. .Build/Web/typo3conf/ext/caretaker_instance"
+                ]
+            },
+            "description": "TYPO3 caretaker instance",
+            "homepage": "https://github.com/TYPO3-Caretaker/",
+            "support": {
+                "source": "https://github.com/TYPO3-Caretaker/caretaker_instance/tree/0.7.7",
+                "issues": "https://github.com/TYPO3-Caretaker/caretaker_instance/issues"
+            },
+            "time": "2016-06-23T14:19:03+00:00"
+        },
         {
             "name": "cogpowered/finediff",
             "version": "0.3.1",
@@ -113,16 +245,16 @@
         },
         {
             "name": "helhum/typo3-console",
-            "version": "4.1.1",
+            "version": "4.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/TYPO3-Console/typo3_console.git",
-                "reference": "a5efe9d79891acd89b1ffadfa2a849f8c94df2a3"
+                "reference": "4c3292cc2a856f126e4e21eff15d5a9f81576415"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TYPO3-Console/typo3_console/zipball/a5efe9d79891acd89b1ffadfa2a849f8c94df2a3",
-                "reference": "a5efe9d79891acd89b1ffadfa2a849f8c94df2a3",
+                "url": "https://api.github.com/repos/TYPO3-Console/typo3_console/zipball/4c3292cc2a856f126e4e21eff15d5a9f81576415",
+                "reference": "4c3292cc2a856f126e4e21eff15d5a9f81576415",
                 "shasum": ""
             },
             "require": {
@@ -194,20 +326,20 @@
                 "console",
                 "typo3"
             ],
-            "time": "2016-12-26T16:36:12+00:00"
+            "time": "2017-01-12T01:21:41+00:00"
         },
         {
             "name": "helhum/typo3-console-plugin",
-            "version": "1.5.0",
+            "version": "1.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/TYPO3-Console/typo3-console-plugin.git",
-                "reference": "2138ea9e9f04c6bcb9924625fd949a048e0df165"
+                "reference": "9d79c0a271f1d6a4d51c74936b9325ad1a1a698e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TYPO3-Console/typo3-console-plugin/zipball/2138ea9e9f04c6bcb9924625fd949a048e0df165",
-                "reference": "2138ea9e9f04c6bcb9924625fd949a048e0df165",
+                "url": "https://api.github.com/repos/TYPO3-Console/typo3-console-plugin/zipball/9d79c0a271f1d6a4d51c74936b9325ad1a1a698e",
+                "reference": "9d79c0a271f1d6a4d51c74936b9325ad1a1a698e",
                 "shasum": ""
             },
             "require": {
@@ -243,13 +375,13 @@
                 }
             ],
             "description": "Installer plugin for helhum/typo3-console, to ease usage without the need to specify scripts in your root composer.json",
-            "homepage": "http://github.com/helhum/typo3-console-plugin",
+            "homepage": "https://github.com/helhum/typo3-console-plugin",
             "keywords": [
                 "composer",
                 "plugin",
                 "typo3 console"
             ],
-            "time": "2016-10-14T22:08:26+00:00"
+            "time": "2017-01-26T11:55:03+00:00"
         },
         {
             "name": "mso/idna-convert",
@@ -629,16 +761,16 @@
         },
         {
             "name": "symfony/console",
-            "version": "v2.8.15",
+            "version": "v2.8.16",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "d5643cd095e5e37d31e004bb2606b5dd7e96602f"
+                "reference": "2e18b8903d9c498ba02e1dfa73f64d4894bb6912"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/d5643cd095e5e37d31e004bb2606b5dd7e96602f",
-                "reference": "d5643cd095e5e37d31e004bb2606b5dd7e96602f",
+                "url": "https://api.github.com/repos/symfony/console/zipball/2e18b8903d9c498ba02e1dfa73f64d4894bb6912",
+                "reference": "2e18b8903d9c498ba02e1dfa73f64d4894bb6912",
                 "shasum": ""
             },
             "require": {
@@ -686,7 +818,7 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2016-12-06T11:59:35+00:00"
+            "time": "2017-01-08T20:43:03+00:00"
         },
         {
             "name": "symfony/debug",
@@ -747,16 +879,16 @@
         },
         {
             "name": "symfony/finder",
-            "version": "v2.8.15",
+            "version": "v2.8.16",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
-                "reference": "c0f10576335743b881ac1ed39d18c0fa66048775"
+                "reference": "355fccac526522dc5fca8ecf0e62749a149f3b8b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/finder/zipball/c0f10576335743b881ac1ed39d18c0fa66048775",
-                "reference": "c0f10576335743b881ac1ed39d18c0fa66048775",
+                "url": "https://api.github.com/repos/symfony/finder/zipball/355fccac526522dc5fca8ecf0e62749a149f3b8b",
+                "reference": "355fccac526522dc5fca8ecf0e62749a149f3b8b",
                 "shasum": ""
             },
             "require": {
@@ -792,7 +924,7 @@
             ],
             "description": "Symfony Finder Component",
             "homepage": "https://symfony.com",
-            "time": "2016-12-13T09:38:12+00:00"
+            "time": "2017-01-02T20:30:24+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",
@@ -855,16 +987,16 @@
         },
         {
             "name": "symfony/process",
-            "version": "v3.2.1",
+            "version": "v3.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/process.git",
-                "reference": "02ea84847aad71be7e32056408bb19f3a616cdd3"
+                "reference": "350e810019fc52dd06ae844b6a6d382f8a0e8893"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/process/zipball/02ea84847aad71be7e32056408bb19f3a616cdd3",
-                "reference": "02ea84847aad71be7e32056408bb19f3a616cdd3",
+                "url": "https://api.github.com/repos/symfony/process/zipball/350e810019fc52dd06ae844b6a6d382f8a0e8893",
+                "reference": "350e810019fc52dd06ae844b6a6d382f8a0e8893",
                 "shasum": ""
             },
             "require": {
@@ -900,7 +1032,7 @@
             ],
             "description": "Symfony Process Component",
             "homepage": "https://symfony.com",
-            "time": "2016-11-24T10:40:28+00:00"
+            "time": "2017-01-02T20:32:22+00:00"
         },
         {
             "name": "typo3/class-alias-loader",
@@ -1230,7 +1362,9 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "caretaker/caretaker": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
